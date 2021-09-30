@@ -1,0 +1,72 @@
+/* Validation Button Styling */
+.fa-check-circle {
+	display: block;
+	position: absolute;
+	color: green;
+	left: 83%;
+	top: 50%;
+	font-size: 1.5rem;
+	transform: translateY(-10%);
+}
+.fa-times-circle {
+	display: block;
+	position: absolute;
+	color: red;
+	left: 83%;
+	top: 50%;
+	font-size: 1.5rem;
+	transform: translateY(-10%);
+}
+.showPassword {
+	display: block;
+	position: absolute;
+	left: 83%;
+	top: 72%;
+}
+@media screen and (max-width:992px) {
+	.fa-times-circle {
+		left: 70%;
+		top: 48%;
+	}
+	.fa-check-circle {
+		left: 70%;
+		top: 48%;
+	}
+	.showPassword {
+		display: block;
+		position: absolute;
+		left: 70%;
+		top: 70%;
+	}
+}
+@media screen and (max-width:768px) {
+	.fa-times-circle {
+		left: 65%;
+		top: 50%;
+	}
+	.fa-check-circle {
+		left: 65%;
+		top: 50%;
+	}
+	.showPassword {
+		display: none;
+	}
+	.form {
+		>div {
+			width: 100%;
+		}
+	}
+	.form-header {
+		width: 100%;
+	}
+}
+@media screen and (max-width:600px) {
+	.fa-times-circle {
+		left: 65%;
+		top: 60%;
+	}
+	.fa-check-circle {
+		left: 65%;
+		top: 60%;
+	}
+}
