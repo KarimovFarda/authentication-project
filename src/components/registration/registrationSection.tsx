@@ -8,7 +8,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export const RegisterInfo = (props: any) => {
   const [checkboxState, setCheckboxState] = useState<boolean>(false)
-  const [displayState,setDisplayState] = useState<string>("Show")
   let SignupSchema;
   if (props.InputValues && props.InputValues?.fullname) {
     SignupSchema = Yup.object().shape({
@@ -95,12 +94,12 @@ export const RegisterInfo = (props: any) => {
                 </div>
                 <div className="form-group form-group-password">
                   <label htmlFor="passwordInfo">Create password*</label>
-                  <Field name="password" type={displayState === "Show" ? 'password' : 'text'}
+                  <Field name="password" type='password'
                     value={props.InputValues ? props.InputValues?.password : null}
                     className={errors.password && touched.password ? 'form-control error-message' : 'form-control'}
                     placeholder={errors.password && touched.password ? errors.password :
                       props.InputValues ? props.InputValues?.password : "Enter Valid Password"} />
-                      <a href="#show" className="showPassword" onClick={() => displayState === "Show" ? setDisplayState("Hide") : setDisplayState("Show")}>{displayState}</a>
+                     
                 </div>
                 <div className="form-check">
                   <input type="checkbox" checked={checkboxState} onChange={() => { checkboxState === false ? setCheckboxState(true) : setCheckboxState(false) }} className="form-check-input" id="exampleCheck1" />
